@@ -1,0 +1,254 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: //scripts/script.js
+        output: -
+
+     scenarios: (100.00%) 2 scenarios, 20 max VUs, 50s max duration (incl. graceful stop):
+              * offset_pagination: 10 looping VUs for 10s (exec: offsetTest, gracefulStop: 30s)
+              * cursor_pagination: 10 looping VUs for 10s (exec: cursorTest, startTime: 10s, gracefulStop: 30s)
+
+
+running (01.0s), 10/20 VUs, 0 complete and 0 interrupted iterations
+offset_pagination   [  10% ] 10 VUs   01.0s/10s
+cursor_pagination • [   0% ] waiting  09.0s
+
+running (02.0s), 10/20 VUs, 10 complete and 0 interrupted iterations
+offset_pagination   [  20% ] 10 VUs   02.0s/10s
+cursor_pagination • [   0% ] waiting  08.0s
+
+running (03.0s), 10/20 VUs, 20 complete and 0 interrupted iterations
+offset_pagination   [  30% ] 10 VUs   03.0s/10s
+cursor_pagination • [   0% ] waiting  07.0s
+
+running (04.0s), 10/20 VUs, 21 complete and 0 interrupted iterations
+offset_pagination   [  40% ] 10 VUs   04.0s/10s
+cursor_pagination • [   0% ] waiting  06.0s
+
+running (05.0s), 10/20 VUs, 30 complete and 0 interrupted iterations
+offset_pagination   [  50% ] 10 VUs   05.0s/10s
+cursor_pagination • [   0% ] waiting  05.0s
+
+running (06.0s), 10/20 VUs, 40 complete and 0 interrupted iterations
+offset_pagination   [  60% ] 10 VUs   06.0s/10s
+cursor_pagination • [   0% ] waiting  04.0s
+
+running (07.0s), 10/20 VUs, 50 complete and 0 interrupted iterations
+offset_pagination   [  70% ] 10 VUs   07.0s/10s
+cursor_pagination • [   0% ] waiting  03.0s
+
+running (07.9s), 10/20 VUs, 60 complete and 0 interrupted iterations
+offset_pagination   [  80% ] 10 VUs   08.0s/10s
+cursor_pagination • [   0% ] waiting  02.0s
+
+running (08.9s), 10/20 VUs, 70 complete and 0 interrupted iterations
+offset_pagination   [  90% ] 10 VUs   09.0s/10s
+cursor_pagination • [   0% ] waiting  01.0s
+
+running (09.9s), 10/20 VUs, 80 complete and 0 interrupted iterations
+offset_pagination   [ 100% ] 10 VUs   10.0s/10s
+cursor_pagination • [   0% ] waiting  00.0s
+
+running (10.9s), 17/20 VUs, 83 complete and 0 interrupted iterations
+offset_pagination ↓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  10% ] 10 VUs  01.0s/10s
+
+running (11.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  20% ] 10 VUs  02.0s/10s
+
+running (12.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  30% ] 10 VUs  03.0s/10s
+
+running (13.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  40% ] 10 VUs  04.0s/10s
+
+running (14.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  50% ] 10 VUs  05.0s/10s
+
+running (15.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  60% ] 10 VUs  06.0s/10s
+
+running (16.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  70% ] 10 VUs  07.0s/10s
+
+running (17.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  80% ] 10 VUs  08.0s/10s
+
+running (18.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [  90% ] 10 VUs  09.0s/10s
+
+running (19.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination   [ 100% ] 10 VUs  10.0s/10s
+
+running (20.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (21.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (22.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (23.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (24.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (25.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (26.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (27.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (28.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (29.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (30.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (31.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (32.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (33.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (34.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (35.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (36.9s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (37.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (38.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (39.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (40.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (41.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (42.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (43.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (44.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (45.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (46.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (47.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (48.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+running (49.8s), 10/20 VUs, 90 complete and 0 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ↓ [ 100% ] 10 VUs  10s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✗ 'p(95)<500' p(95)=572.32ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 180     3.605537/s
+    checks_succeeded...: 100.00% 180 out of 180
+    checks_failed......: 0.00%   0 out of 180
+
+    ✓ offset status is 200
+    ✓ offset has data
+
+    HTTP
+    http_req_duration..............: avg=219.13ms min=14.95ms med=177.87ms max=636.19ms p(90)=567.25ms p(95)=572.32ms
+      { expected_response:true }...: avg=219.13ms min=14.95ms med=177.87ms max=636.19ms p(90)=567.25ms p(95)=572.32ms
+    http_req_failed................: 0.00%  0 out of 100
+    http_reqs......................: 100    2.003076/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.24s    min=1.09s   med=1.18s    max=1.63s    p(90)=1.57s    p(95)=1.57s   
+    iterations.....................: 90     1.802768/s
+    vus............................: 10     min=10       max=17
+    vus_max........................: 20     min=20       max=20
+
+    NETWORK
+    data_received..................: 330 kB 6.6 kB/s
+    data_sent......................: 11 kB  223 B/s
+
+
+
+
+running (49.9s), 00/20 VUs, 90 complete and 10 interrupted iterations
+offset_pagination ✓ [ 100% ] 10 VUs  10s
+cursor_pagination ✓ [ 100% ] 10 VUs  10s

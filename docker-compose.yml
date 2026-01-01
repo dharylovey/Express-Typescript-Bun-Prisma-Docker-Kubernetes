@@ -42,5 +42,11 @@ services:
       - "5050:80"
     depends_on:
       - postgres
+  k6:
+    image: grafana/k6:latest
+    volumes:
+      - ./benchmark:/scripts
+    networks:
+      - default
 volumes:
   pgdata:

@@ -228,6 +228,26 @@ kubectl get services
 docker compose exec api bun prisma/seed.ts
 ```
 
+## 🏎️ Benchmarking & Stress Testing
+
+Run these tests to evaluate API performance.
+
+### 1. Performance Benchmark (Offset vs Cursor)
+
+Compares response times of offset-based vs cursor-based pagination.
+
+```bash
+docker compose run --rm k6 run //scripts/script.js
+```
+
+### 2. Max RPS Stress Test
+
+Ramps up to 300 concurrent users to find maximum throughput.
+
+```bash
+docker compose run --rm k6 run //scripts/stress.js
+```
+
 ## 📝 License
 
 MIT
