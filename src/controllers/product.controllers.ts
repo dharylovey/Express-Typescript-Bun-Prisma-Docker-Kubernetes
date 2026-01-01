@@ -22,6 +22,24 @@ export const createProduct = async (
   }
 };
 
+export const getProductById = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const { params } = updateProductSchema.parse({
+    params: req.params,
+    body: {},
+  });
+  try {
+    const { id } = params;
+    const data = await service.getProductById(id);
+    res.json(data);
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const getProductsOffset = async (
   req: Request,
   res: Response,

@@ -8,6 +8,14 @@ export class ProductService {
     return this.repo.create(data);
   }
 
+  async getProductById(id: string) {
+    const product = await this.repo.findById(id);
+    if (!product) {
+      throw new Error(`Product not found with id ${id}`);
+    }
+    return product;
+  }
+
   async getProductsOffset(page: number = 1, limit: number = 10) {
     const skip = (page - 1) * limit;
     const { data, total } = await this.repo.findAllOffset(skip, limit);

@@ -7,6 +7,9 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/mydb
     depends_on:
       - postgres
+    volumes:
+      - ./src:/app/src
+      - ./prisma:/app/prisma
     develop:
       watch:
         # Sync source files without rebuilding

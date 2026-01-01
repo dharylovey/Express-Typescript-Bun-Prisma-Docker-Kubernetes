@@ -212,14 +212,21 @@ kubectl get services
 
 ## 🛠️ Available Scripts
 
-| Command                   | Description               |
-| ------------------------- | ------------------------- |
-| `bun run dev`             | Start development server  |
-| `bun run start`           | Start production server   |
-| `bunx prisma db push`     | Sync schema to database   |
-| `bunx prisma migrate dev` | Create and run migrations |
-| `bunx prisma studio`      | Open Prisma Studio        |
-| `bunx prisma generate`    | Generate Prisma Client    |
+| Command                   | Description                    |
+| ------------------------- | ------------------------------ |
+| `bun run dev`             | Start development server       |
+| `bun run start`           | Start production server        |
+| `bunx prisma db push`     | Sync schema to database        |
+| `bunx prisma migrate dev` | Create and run migrations      |
+| `bunx prisma studio`      | Open Prisma Studio             |
+| `bunx prisma generate`    | Generate Prisma Client         |
+| `bun prisma/seed.ts`      | Seed database with sample data |
+
+### Seeding in Docker
+
+```bash
+docker compose exec api bun prisma/seed.ts
+```
 
 ## 📝 License
 
