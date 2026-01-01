@@ -36,11 +36,31 @@ A production-ready RESTful API built with **Express.js**, **TypeScript**, **Bun*
 ### Prerequisites
 
 - [Bun](https://bun.sh/) installed
-- [Docker](https://www.docker.com/) installed (for database)
+- [Docker](https://www.docker.com/) installed
 
-### Local Development
+### Using Docker Compose (Recommended)
 
-1. **Clone and install dependencies:**
+```bash
+# Start all services (API + PostgreSQL + pgAdmin)
+docker compose up -d
+
+# Sync database schema (first time only)
+docker compose exec api bunx prisma db push
+
+# With watch mode for development
+docker compose up --watch
+```
+
+**Services:**
+| Service | URL | Credentials |
+|-----------|------------------------------|--------------------------|
+| API | http://localhost:3000 | - |
+| Swagger | http://localhost:3000/api-docs | - |
+| pgAdmin | http://localhost:5050 | admin@admin.com / admin |
+
+### Local Development (Without Docker for API)
+
+1. **Install dependencies:**
 
    ```bash
    bun install
@@ -55,43 +75,22 @@ A production-ready RESTful API built with **Express.js**, **TypeScript**, **Bun*
 3. **Configure environment variables:**
 
    ```bash
-   # Create .env file
+   # .env file
+   PORT=3000
    DATABASE_URL=postgresql://postgres:postgres@localhost:5432/mydb
+   NODE_ENV="development"
    ```
 
-4. **Run Prisma migrations:**
+4. **Sync database schema:**
 
    ```bash
-   bunx prisma migrate dev
+   bunx prisma db push
    ```
 
 5. **Start the development server:**
-
    ```bash
    bun run dev
    ```
-
-6. **Access the API:**
-   - API: http://localhost:3000
-   - Swagger Docs: http://localhost:3000/api-docs
-   - Health Check: http://localhost:3000/health
-
-### Using Docker Compose (Recommended)
-
-```bash
-# Start all services (API + PostgreSQL + pgAdmin)
-docker compose up -d
-
-# With watch mode for development
-docker compose up --watch
-```
-
-**Services:**
-| Service | URL | Credentials |
-|-----------|--------------------------|--------------------------|
-| API | http://localhost:3000 | - |
-| Swagger | http://localhost:3000/api-docs | - |
-| pgAdmin | http://localhost:5050 | admin@admin.com / admin |
 
 ## 📚 API Endpoints
 
@@ -130,7 +129,6 @@ curl -X POST http://localhost:3000/products \
 ### Get Products (Offset Pagination)
 
 ```bash
-# Default: page=1, limit=10
 curl "http://localhost:3000/products/offset?page=1&limit=10"
 ```
 
@@ -143,9 +141,7 @@ curl "http://localhost:3000/products/offset?page=1&limit=10"
     "page": 1,
     "limit": 10,
     "total": 50,
-    "totalPages": 5,
-    "hasNextPage": true,
-    "hasPrevPage": false
+    "totalPages": 5
   }
 }
 ```
@@ -216,13 +212,14 @@ kubectl get services
 
 ## 🛠️ Available Scripts
 
-| Command                   | Description              |
-| ------------------------- | ------------------------ |
-| `bun run dev`             | Start development server |
-| `bun run start`           | Start production server  |
-| `bunx prisma migrate dev` | Run database migrations  |
-| `bunx prisma studio`      | Open Prisma Studio       |
-| `bunx prisma generate`    | Generate Prisma Client   |
+| Command                   | Description               |
+| ------------------------- | ------------------------- |
+| `bun run dev`             | Start development server  |
+| `bun run start`           | Start production server   |
+| `bunx prisma db push`     | Sync schema to database   |
+| `bunx prisma migrate dev` | Create and run migrations |
+| `bunx prisma studio`      | Open Prisma Studio        |
+| `bunx prisma generate`    | Generate Prisma Client    |
 
 ## 📝 License
 

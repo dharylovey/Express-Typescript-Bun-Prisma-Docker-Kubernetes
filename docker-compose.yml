@@ -22,6 +22,8 @@ services:
           path: package.json
   postgres:
     image: postgres:15-alpine
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
